@@ -214,9 +214,11 @@ function game() {
 game();
 
 function speedUp() {
-    snakeSpeed = snakeSpeed*2;
-    tmp = snake.moveTo;
-    snake = new Snake(snakeSize, snakeSpeed);
-    snake.moveTo = tmp;
+    if (snake.moveTo !== undefined) {
+        snakeSpeed = snakeSpeed*2;
+        tmp = snake.moveTo;
+        snake = new Snake(snakeSize, snakeSpeed);
+        snake.moveTo = tmp;
+    }
 }
-setInterval(speedUp, 60*1000);
+setInterval(speedUp, 5*1000);
