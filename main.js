@@ -221,4 +221,4 @@ function speedUp() {
         snake.moveTo = tmp;
     }
 }
-setInterval(speedUp, 5*1000);
+setInterval(speedUp, 60*1000);
