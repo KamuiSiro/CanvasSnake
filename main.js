@@ -215,5 +215,6 @@ game();
 
 function speedUp() {
     snakeSpeed = snakeSpeed*2;
+    snake = new Snake(snakeSize, snakeSpeed);
 }
 setInterval(speedUp, 60*1000);
